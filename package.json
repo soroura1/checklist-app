@@ -1,0 +1,25 @@
+{
+  "name": "@citadel/checklist-app",
+  "version": "0.1.0",
+  "description": "The standalone checklist platform. Approved tools, offline, with no game.",
+  "type": "module",
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": { "node": ">=22.12" },
+  "scripts": {
+    "dev": "vite --port 8084",
+    "build": "vite build",
+    "check": "./check-repo.sh",
+    "test": "node --test test/*.test.js",
+    "conformance": "node ../contracts/conformance/src/run.js"
+  },
+  "dependencies": {
+    "@citadel/contracts": "file:../contracts",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "vite": "^8.0.0",
+    "@vitejs/plugin-react": "^6.0.5"
+  }
+}

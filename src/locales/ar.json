@@ -1,0 +1,16 @@
+{
+  "app.title": "قوائم القلعة",
+  "nav.label": "الرئيسية",
+  "surface.entry.title": "Entry",
+  "surface.find.title": "Find a checklist",
+  "surface.tool.title": "Read a checklist",
+  "surface.offline.title": "Offline content",
+  "entry.heading": "Citadel Checklists",
+  "entry.lede": "Approved preparedness checklists, usable away from a desk.",
+  "boundary.heading": "What this is, and what it is not",
+  "boundary.statement": "القلعة مخصّصة للتأهّب والتمرين والتحسين فقط.",
+  "boundary.not_intro": "It is explicitly not:",
+  "boundary.not_1": "live incident command or live incident operations",
+  "boundary.not_2": "live triage or patient tracking during a real event",
+  "boundary.not_3": "clinical decision support"
+}
