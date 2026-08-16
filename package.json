@@ -16,12 +16,12 @@
     "conformance": "node ../contracts/conformance/src/run.js"
   },
   "dependencies": {
-    "@citadel/contracts": "file:../contracts",
+    "@citadel/contracts": "git+https://github.com/soroura1/contracts.git#v0.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "vite": "^8.0.0",
-    "@vitejs/plugin-react": "^6.0.5"
+    "@vitejs/plugin-react": "^6.0.5",
+    "vite": "^8.0.0"
   }
 }
