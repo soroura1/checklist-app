@@ -16,7 +16,7 @@
     "conformance": "node node_modules/@citadel/contracts/conformance/src/self.js"
   },
   "dependencies": {
-    "@citadel/contracts": "git+https://github.com/soroura1/contracts.git#v0.2.1",
+    "@citadel/contracts": "git+https://github.com/soroura1/contracts.git#main",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
