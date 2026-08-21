@@ -1,33 +1,28 @@
 import { createRoot } from 'react-dom/client';
-import { useState } from 'react';
-import { EntryScreen } from './features/entry/EntryScreen.jsx';
-import { Navigation } from './layout/navigation.jsx';
-import { BundleStore } from './offline/bundle-store.js';
-import { SURFACES } from './surfaces.js';
-import { setLocale, t } from './locales/index.js';
 
-setLocale('en');
-const store = new BundleStore();
-
-/** Cached age is ALWAYS visible — never inferred silently by the user. */
-function CachedAge() {
-  const days = store.ageDays();
-  return <p>{days === null ? t('offline.none') : t('offline.cached_age').replace('{days}', Math.round(days))}</p>;
-}
-
-function App() {
-  const [path, setPath] = useState(window.location.pathname);
-  const surface = SURFACES.find((s) => s.path === path) ?? SURFACES[0];
-  const go = (p) => { window.history.pushState({}, '', p); setPath(p); };
-
-  return (
-    <>
-      <Navigation onNavigate={go} />
-      {surface.id === 'entry' && <EntryScreen onContinue={() => go('/find')} />}
-      {surface.id === 'find' && <main><h1>{t('find.heading')}</h1><CachedAge /></main>}
-      {surface.id === 'tool' && <main><h1>{t('surface.tool.title')}</h1><CachedAge /></main>}
-      {surface.id === 'offline' && <main><h1>{t('offline.heading')}</h1><CachedAge /></main>}
-    </>
+/**
+ * ⛔ SCAFFOLDING. THERE IS NO APPLICATION HERE YET.
+ *
+ * This repository was reset to its engineering and deployment infrastructure on
+ * 2026-08-21, alongside `citadel` and `contracts`. The offline field client,
+ * its surfaces, its locales and its tests were deleted deliberately, to be
+ * rebuilt one reviewed step at a time.
+ *
+ * ⚠️ THIS FILE EXISTS BECAUSE VITE NEEDS AN ENTRY, AND FOR NO OTHER REASON.
+ * `index.html` names it; without it `npm run build` fails and the pipeline goes
+ * red for a reason that has nothing to do with the code.
+ *
+ * ⚠️ AND A BLANK PAGE IS AMBIGUOUS. This project has already paid for that
+ * once — a production page rendered blank on 17 August while the build
+ * succeeded and every check agreed, because nothing executed the page. So this
+ * says what it is rather than leaving a reader to choose between "not built
+ * yet" and "broken".
+ */
+const root = document.getElementById('root');
+if (root) {
+  createRoot(root).render(
+    <main data-scaffolding="true">
+      <p>This client is being rebuilt. There is nothing to use here yet.</p>
+    </main>,
   );
 }
-createRoot(document.getElementById('root')).render(<App />);
